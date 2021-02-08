@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="addr1" class="com.niraj.Address">
+    	<property name="city" value="Ktm"></property>
+    	<property name="country" value="Nepal"></property>
+    </bean>
+    
+    <bean id="addr2" class="com.niraj.Address">
+    	<property name="city" value="Chandigarh"></property>
+    	<property name="country" value="India"></property>
+    </bean>
+    
+    <bean id="emp" class="com.niraj.Employee">
+    	<property name="eid" value="80"></property>
+    	<property name="ename" value="Niraj Thagunna"></property>
+    	<property name="address">
+    		<list>
+    			<ref bean="addr1"/>
+    			<ref bean="addr2"/>
+    		</list>
+    	</property>
+    </bean>
+    
+</beans>

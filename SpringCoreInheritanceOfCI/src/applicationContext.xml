@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <bean id="emp1" class="com.niraj.Employee">
+    	<constructor-arg value="80" type="int"></constructor-arg>
+    	<constructor-arg value="Niraj Thagunna"></constructor-arg>
+    </bean>
+    
+    <bean id="addr" class="com.niraj.Address">
+    	<property name="state" value="Darchula"></property>
+    	<property name="city" value="USA"></property>
+    	<property name="country" value="Nepal"></property>
+    </bean>
+    
+    <bean id="emp2" class="com.niraj.Employee" parent="emp1">
+    	<!-- <constructor-arg ref="addr"></constructor-arg> -->
+    	<!-- Inject Value by using setters -->
+    	<property name="address" ref="addr"></property>
+    </bean>
+    
+</beans>

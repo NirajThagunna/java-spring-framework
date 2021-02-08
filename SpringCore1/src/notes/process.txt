@@ -1,0 +1,23 @@
+Process to create Spring IOC
+	
+	1) Create Bean Class - Model - POJO
+	2) Create Xml File - Create a bean to construct an object of a class
+	3) Create Demo Class - It contains Spring way i.e. main class
+	4) Load jar files - Dependencies
+	5) Run - Execute
+	
+Spring IOC have two containers - These two are API's
+	1) BeanFactory - It will construct an object of a class with request - class is XmlBeanFactory
+	2) ApplicationContext - It will construct an object of a class without any request - Class is ClassPathXmlApplicationContext
+	
+	-> Features of an IOC Container
+		1) Creating the objects
+		2) Managing their complete life cycle
+		3) Wiring them together
+		4) Configuring - Configure your objects in a xml file i.e. set the key value pair to set value for an attributes
+		
+Dependency Injection
+	Spring Way: XML | IOC
+		Dependency Injection can be achieved by using either
+			1) Constructors - Constructor Injection
+			2) Setters - Setter Injection
